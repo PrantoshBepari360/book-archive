@@ -54,8 +54,8 @@ const displaySearchResult = booksDetail => {
                     <img src="https://covers.openlibrary.org/b/id/${book.cover_i ? book.cover_i: 'No Result'}-M.jpg" class="w-50 h-50 mx-auto" alt="">
                     <div class="card-body">
                         <h5 class="card-title">Name: ${book.title}</h5>
-                        <p class="card-text fs-5">Writer: ${book.author_name[0] ? book.author_name: 'No result'}</p>
-                        <p class="card-text fs-5">Publisher: ${book.publisher[0] ? book.publisher: 'No result'}</p>
+                        <p class="card-text fs-5">Writer: ${book.author_name ? book.author_name: 'No result'}</p>
+                        <p class="card-text fs-5">Publisher: ${book.publisher ? book.publisher: 'No result'}</p>
                         <p class="card-text fs-5">First Publish: ${book.first_publish_year ? book.first_publish_year: 'No result'}</p>
                     </div>
                 </div>
