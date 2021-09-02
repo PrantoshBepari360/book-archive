@@ -16,7 +16,7 @@ const searchBooks = () => {
         // booklist number show
         document.getElementById('book-numbers').style.display = 'block';
 
-        const url = `http://openlibrary.org/search.json?q=${searchText}`
+        const url = `https://openlibrary.org/search.json?q=${searchText}`
         fetch(url)
             .then(res => res.json())
             .then(data => displaySearchResult(data))
@@ -39,9 +39,9 @@ const displaySearchResult = booksDetail => {
     const bookList = booksDetail.docs;
     bookList.forEach(book => {
 
-        if (bookList === null) {
+        if (bookList.length === 0) {
             displayError()
-        } else {
+        } else if (bookList.length <= 100){
             // error handel
             document.getElementById('error-message').style.display = 'none';
             // booklist number
